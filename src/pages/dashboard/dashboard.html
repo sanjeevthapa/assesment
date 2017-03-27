@@ -1,0 +1,17 @@
+<ion-header style="primary">
+  <ion-navbar hideBackButton>
+    <!-- hamburger menu -->
+    <button ion-button menuToggle >
+      <img src="./assets/img/ham.png" alt="">
+    </button>
+    <ion-title>DASHBOARD</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- real scroll content start here -->
+<!-- no bounce for no scrolling -->
+<ion-content padding no-bounce>
+  <!-- Buttons to go to Input Page -->
+  <button ion-button block class="custombtn" large (click)="gotoInput()">Input</button>
+  <button ion-button block color="secondary" class="custombtn" large (click)="gotoOutput()">Output</button>
+</ion-content>

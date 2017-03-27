@@ -1,0 +1,66 @@
+//scss for page login
+page-login {
+    // center the logo
+    .logo{
+      width: auto;
+      margin: auto;
+      display: block;
+      margin-top: 15%;
+      margin-bottom: 10%;
+    }
+    .item{
+      color:#D0011B !important;
+    }
+    .icon{
+      color:#F8E71C !important;
+    }
+
+    .text-input::-moz-placeholder{
+      color: #D0011B;
+    }
+
+    .text-input:-ms-input-placeholder {
+      color: #D0011B;
+    }
+    .text-input::-webkit-input-placeholder {
+      text-indent: 0;
+      color: #D0011B;
+    }
+    .error{
+      margin-top: -15px;
+      text-align: right;
+      font-family: 'muliitalic';
+      color: #fff;
+    }
+    .errorno{
+      text-align: right;
+      font-family: 'mulilight';
+      text-decoration: underline;
+      color: #fff;
+      text-transform:uppercase;
+      // top:-10px;
+      position: relative;
+    }
+    .custominput.ng-invalid{
+      border-bottom:5px solid #F8E81C !important;
+    }
+    .custominput.ng-valid{
+      border-bottom:5px solid #E46752 !important;
+    }
+    .item-inner{
+      border-bottom:none !important;
+    }
+    .custominput{
+      margin-bottom:20px;
+      height: 66px;
+    }
+    .loginbtn{
+      background-color:#E46752;
+      margin-top:10px;
+
+    }
+    .loginbtn span{
+      font-family:'mulibold' !important;
+      font-size:18px;
+    }
+}

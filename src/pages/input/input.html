@@ -1,0 +1,28 @@
+<ion-header style="primary">
+  <ion-navbar>
+    <ion-title>Input</ion-title>
+  </ion-navbar>
+</ion-header>
+<!-- content start here -->
+<ion-content padding>
+  <!-- card for displaying some readable information -->
+  <!-- <ion-card>
+    <ion-card-content>
+      Uploading Pictures has been never this easy....
+    </ion-card-content>
+  </ion-card> -->
+  <!-- now form inside a list -->
+  <ion-list>
+  <button ion-button block class="custombtn"  (click)="uploadPicture()">Upload Picture</button>
+    <form [formGroup]="InputForm" (submit)="sendToServer()">
+      <!-- description input -->
+        <ion-item class="custominput mt20">
+          <ion-textarea  autocapitalize="off" placeholder="Enter Description (255 characters)" formControlName="description"></ion-textarea>
+        </ion-item>
+        <!-- end username -->
+
+        <button type="submit" ion-button block color="secondary" class="custombtn" large (click)="uploadImage()">Save</button>
+    </form>
+  </ion-list>
+
+</ion-content>

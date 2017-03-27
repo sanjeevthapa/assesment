@@ -1,0 +1,19 @@
+<ion-header style="primary">
+  <ion-navbar>
+    <ion-title>Output</ion-title>
+  </ion-navbar>
+</ion-header>
+<!-- content start here -->
+<ion-content padding>
+<!-- ionic slides loop all the data -->
+<ion-slides>
+  <ion-slide *ngFor="let photo of photos">
+    <img src="{{photo.photo_uri}}" alt="">
+    <ion-card>
+      <ion-card-content>
+      {{photo.description}}
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+</ion-slides>
+</ion-content>

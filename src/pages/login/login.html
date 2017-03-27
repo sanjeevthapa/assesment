@@ -1,0 +1,33 @@
+<!-- Login Template contains form, logo etc -->
+<!-- ionic content directive start here -->
+<ion-content padding>
+  <!-- add a logo -->
+  <img alt="Logo" class="logo" src="assets/img/logo.png" >
+  <ion-list>
+    <!-- form start here -->
+    <form [formGroup]="Loginform" (submit)="login()">
+        <!-- username input -->
+        <ion-item class="custominput">
+          <ion-icon name="person" item-left></ion-icon>
+          <ion-input type="text" autocapitalize="off" placeholder="Username" formControlName="username"></ion-input>
+        </ion-item>
+        <!-- end username -->
+
+        <!-- username required error -->
+        <p class="error" *ngIf="Loginform.controls.username.hasError('required') && Loginform.controls.username.touched" danger>Username is required.</p>
+
+        <!-- password formcontrol -->
+        <ion-item class="custominput">
+          <ion-icon name="lock" item-left></ion-icon>
+          <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        </ion-item>
+        <!-- end password form control -->
+
+        <!-- password required error -->
+        <p class="error" *ngIf="Loginform.controls.password.hasError('required') && Loginform.controls.password.touched" danger>Password is required.</p>
+        <button ion-button full large class="loginbtn" type="submit" [disabled]="!Loginform.valid">LOGIN</button>
+
+
+  </form>
+  </ion-list>
+</ion-content>
