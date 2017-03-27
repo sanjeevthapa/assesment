@@ -124,20 +124,22 @@ public pathForImage(img) {
   }
 }
 
+/*
+  Upload image is not working in the simulator, works on the real device and hosted on a infrastructure
+ */
 public uploadImage() {
   // Destination URL
-  var url = "http://127.0.0.1:8000/photos";
+  var url = "http://clients.cloudyfox.com/blog/public/photos";
 
   // File for Upload
   var targetPath = this.pathForImage(this.lastImage);
-console.log(targetPath);
   // File name only
   var filename = this.lastImage;
   var options = {
     fileKey: "file",
     fileName: filename,
     chunkedMode: false,
-    params : {'fileName': filename}
+    params : {'fileName': filename,'description':this.InputForm.value.description,'userid':1}
   };
 
   const fileTransfer = new Transfer();
@@ -157,7 +159,6 @@ console.log(targetPath);
   });
   return false;
 }
-
 
 
 }

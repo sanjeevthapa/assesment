@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 export class Myservice {
   baseURI:String;
   constructor(public http: Http) {
-    this.baseURI="http://127.0.0.1:8000/";
+    this.baseURI="http://clients.cloudyfox.com/blog/public/";
   }
 
   getTasks(){

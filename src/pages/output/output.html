@@ -6,14 +6,10 @@
 <!-- content start here -->
 <ion-content padding>
 <!-- ionic slides loop all the data -->
-<ion-slides>
-  <ion-slide *ngFor="let photo of photos">
-    <img src="{{photo.photo_uri}}" alt="">
-    <ion-card>
-      <ion-card-content>
-      {{photo.description}}
-      </ion-card-content>
-    </ion-card>
-  </ion-slide>
-</ion-slides>
+   <ion-slides>
+      <ion-slide *ngFor = ' let photo of photos ' >
+          <img src="{{photo.photo_uri}}" alt="" width="150px">
+          {{photo.description}}
+      </ion-slide>
+    </ion-slides>
 </ion-content>
